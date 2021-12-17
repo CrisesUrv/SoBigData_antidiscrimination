@@ -7,17 +7,10 @@ References:
 [1] Sara Hajian and Josep Domingo-Ferrer, "A methodology for direct and indirect discrimination 
     prevention in data mining", IEEE Transactions on Knowledge and Data Engineering, Vol. 25, no. 7, pp. 1445-1459, 
     Jun 2013. DOI: https://doi.org/10.1109/TKDE.2012.72 
-
-(See also examples of use in sections 1 and 2 of the jupyter notebook: test_antiDiscrimination.ipynb)
 """
 
-""" Load the data set and the xml describing them """
-
-""" Load the data set and the xml describing them.
-    Following, it is indicated the path to the csv file containing the data set and the path
-    to the xml file describing the attributes in the data set.
-    Inside the xml file, there is a detailed descritpion about how to fill this xml file
-    in order to properly configure the different attribute types in the data set  """
+""" Load the data set.
+    Following, it is indicated the path to the csv file containing the data."""
 
 path_csv = "input_datasets/adult_anti_discrimination.csv"
 

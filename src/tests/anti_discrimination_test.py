@@ -7,19 +7,12 @@ References:
 [1] Sara Hajian and Josep Domingo-Ferrer, "A methodology for direct and indirect discrimination 
     prevention in data mining", IEEE Transactions on Knowledge and Data Engineering, Vol. 25, no. 7, pp. 1445-1459, 
     Jun 2013. DOI: https://doi.org/10.1109/TKDE.2012.72 
-
-(See also examples of use in sections 1 and 2 of the jupyter notebook: test_antiDiscrimination.ipynb)
 """
 
-""" Load the data set and the xml describing them """
+""" Load the data set.
+    Following, it is indicated the path to the csv file containing the data."""
 
-""" Load the data set and the xml describing them.
-    Following, it is indicated the path to the csv file containing the data set and the path
-    to the xml file describing the attributes in the data set.
-    Inside the xml file, there is a detailed descritpion about how to fill this xml file
-    in order to properly configure the different attribute types in the data set  """
-
-path_csv = "../../input_datasets/adult_anti_discrimination.csv"
+path_csv = "input_datasets/adult_anti_discrimination.csv"
 
 """ Load the adult dataset containing 45222 records"""
 data_frame = utils.read_dataframe_from_csv(path_csv)
@@ -49,7 +42,7 @@ anti_discrimination_metrics = anonymization_scheme.calculate_metrics()
 anti_discrimination_metrics.description()
 
 """ Save the anonymizated data set to disk in csv format"""
-anonymization_scheme.save_anonymized_dataset("../../output_datasets/adult_anti_discrimination_anom.csv")
+anonymization_scheme.save_anonymized_dataset("output_datasets/adult_anti_discrimination_anom.csv")
 
 """ The anonymized data set can be converted to pandas dataframe"""
 df_anonymized = anonymization_scheme.anonymized_dataset_to_dataframe()
